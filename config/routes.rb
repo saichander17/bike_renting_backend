@@ -9,5 +9,13 @@ Rails.application.routes.draw do
   	get 'available-bikes', to: 'bikes#fetch_available_bikes'
   end
 
+  scope "v1/cities/", :module => "api/v1", :format => :json do
+  	get 'index', to: 'cities#index'
+  end
+
+  scope "v1/locations/", :module => "api/v1", :format => :json do
+  	get 'index', to: 'locations#index'
+  end
+
   get 'health_check', to: 'health_check#health_check'
 end
