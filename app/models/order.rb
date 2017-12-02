@@ -5,7 +5,7 @@ class Order < ApplicationRecord
 	has_one :bike
 	validates_presence_of :user_id
 	validates_presence_of :bike_id
-	before_save :assign_bike_number
+	after_validation :assign_bike_number
 
 	def assign_bike_number
 		available_bike_numbers = get_available_bike_number_ids_for_bike(self.bike_id,self.start_time,self.end_time,self.location_id)
