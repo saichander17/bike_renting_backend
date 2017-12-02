@@ -30,6 +30,6 @@ class Api::V1::OrdersController < ApplicationController
 	end
 
 	def order_creation_service
-		OrderCreatorService.new(user,{bike_id: params[:bike_id], start_time: params[:start_time], end_time: params[:end_time], location_id: params[:location_id]})
+		@_order_creation_service ||= OrderCreatorService.new(user,{bike_id: params[:bike_id], start_time: params[:start_time], end_time: params[:end_time], location_id: params[:location_id]})
 	end
 end
