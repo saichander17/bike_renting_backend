@@ -21,6 +21,7 @@ Location.create({name: "Manikonda", city_id: City.find_by(name: "Hyderabad").id}
 Location.create({name: "Mehdipatnam", city_id: City.find_by(name: "Hyderabad").id})
 Location.create({name: "Uppal", city_id: City.find_by(name: "Hyderabad").id})
 User.delete_all
+User.create({id: 1, first_name: "default", uid: "default@gmail.com", provider: "email", email: "saichander@gmail.com"})
 User.create({first_name: "Sai", uid: "saichander@gmail.com", provider: "email", email: "saichander@gmail.com"})
 User.create({first_name: "Sai1", uid: "saichander1@gmail.com", provider: "email", email: "saichander1@gmail.com"})
 

@@ -2,7 +2,7 @@ class Order < ApplicationRecord
 	include BikeHelper
 	belongs_to :user
 	has_one :bike_number
-	has_one :bike_id
+	has_one :bike
 	validates_presence_of :user_id
 	validates_presence_of :bike_id
 	before_save :assign_bike_number

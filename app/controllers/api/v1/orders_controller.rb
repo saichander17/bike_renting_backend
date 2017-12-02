@@ -26,7 +26,7 @@ class Api::V1::OrdersController < ApplicationController
 	end
 
 	def user
-		@_user = User.find_by(user_id)
+		@_user = User.find_by(id: user_id)
 	end
 
 	def order_creation_service
