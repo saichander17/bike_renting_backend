@@ -1,5 +1,5 @@
 class Api::V1::OrdersController < ApplicationController
-	# before_action :api_authenticate_user!
+	before_action :authenticate_user!
 	def create
 		if order_creation_service.create
 			render json: {success: true}
@@ -30,6 +30,6 @@ class Api::V1::OrdersController < ApplicationController
 	end
 
 	def order_creation_service
-		OrderCreatorService.new(user,{bike_id: params[:bike_id], start_time: params[:start_time], end_time: params[:end_time]})
+		OrderCreatorService.new(user,{bike_id: params[:bike_id], start_time: params[:start_time], end_time: params[:end_time], location_id: params[:location_id]})
 	end
 end

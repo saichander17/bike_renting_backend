@@ -1,6 +1,6 @@
 class OrderCreatorService < ApplicationCreatorService
 	def create
-		order = Order.new(user_id: @user.id,start_time: start_time,end_time: end_time)
+		order = Order.new(user_id: @user.id,start_time: start_time,end_time: end_time, location_id: location_id)
   	if order.save
   		return true
   	else
