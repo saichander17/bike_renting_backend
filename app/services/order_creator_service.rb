@@ -1,7 +1,7 @@
 class OrderCreatorService < ApplicationCreatorService
 	def create
 		uid=@user.id rescue User.first.id
-		order = Order.new(user_id: uid,start_time: start_time,end_time: end_time, location_id: location_id)
+		order = Order.new(user_id: uid,start_time: start_time,end_time: end_time, location_id: location_id, bike_id: bike_id)
   	if order.save
   		return true
   	else
@@ -13,7 +13,11 @@ class OrderCreatorService < ApplicationCreatorService
   private
 
   def bike
-  	@_bike ||= Bike.find(@params[:bike_id])
+  	@_bike ||= Bike.find(bike_id)
+  end
+
+  def bike_id
+    @params[:bike_id]
   end
 
   def start_time
