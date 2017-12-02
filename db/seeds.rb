@@ -19,8 +19,8 @@ Location.create({name: "Manikonda", city_id: 2})
 Location.create({name: "Mehdipatnam", city_id: 2})
 Location.create({name: "Uppal", city_id: 2})
 
-User.create({first_name: "Sai", uid: "saichander@gmail.com", provider: "email", email: "saichander@gmail.com"})
-User.create({first_name: "Sai1", uid: "saichander1@gmail.com", provider: "email", email: "saichander@gmail.com"})
+User.create({first_name: "Sai", uid: "saichander@gmail.com", provider: "email", email: "saichander@gmail.com"}) rescue nil
+User.create({first_name: "Sai1", uid: "saichander1@gmail.com", provider: "email", email: "saichander@gmail.com"}) rescue nil
 
 
 Bike.create({name: "Royal Enfield Classic", bike_brand_name: "Roayl Enfield",price: 150000, height: 100, weight: 160, milage: 20, tank_volume: 180})
