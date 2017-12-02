@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+City.create({name: "Bengaluru"})
+City.create({name: "Hyderabad"})
+# City.create({name: "Bengaluru"})
+# City.create({name: "Bengaluru"})
+Location.create({name: "Koramangala", city_id: 1})
+Location.create({name: "Indiranagar", city_id: 1})
+Location.create({name: "BTM Layout", city_id: 1})
+Location.create({name: "HSR Layout", city_id: 1})
+
+Location.create({name: "Madhapur", city_id: 2})
+Location.create({name: "Manikonda", city_id: 2})
+Location.create({name: "Mehdipatnam", city_id: 2})
+Location.create({name: "Uppal", city_id: 2})
