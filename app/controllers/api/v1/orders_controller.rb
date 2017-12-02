@@ -2,12 +2,22 @@ class Api::V1::OrdersController < ApplicationController
 	# before_action :api_authenticate_user!
 	def create
 		if order_creation_service.create
+			render json: {success: true}
 		else
+			render json: {success: false, errors: order_creation_service.errors}
 		end
-		# if Bike.find_by(id: params[:bike_id])
-		# else
-		# 	render json: {success: false, errors: {bike: ["Bike not found."]}}
-		# end
+	end
+
+	def show
+		if order=Order.find_by(id: params[:id])
+			if order.user_id==current_user.id
+				render json: {success: true, order_details: OrderDecorator.new(order).as_json}
+			else
+				render json: {success: false, errors: {order: ["Not available"]}}
+			end
+		else
+			render json: {success: false, errors: {order: ["Not available"]}}
+		end
 	end
 
 	private
