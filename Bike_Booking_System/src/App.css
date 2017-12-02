@@ -1,0 +1,129 @@
+.main_container {
+  width: 100%;
+  margin: auto;
+  max-width: 900px
+}
+
+.buttons_blocks {
+  background-color: #EEEEEE;
+  position: fixed;
+  margin-left: -10px;
+  bottom: 0px;
+  padding: 10px;
+  width: 100%;
+}
+
+.actions_block {
+  float: right;
+  padding-right: 20px;
+}
+
+.selectcity_container {
+  margin: auto;
+  width: 80%;
+}
+
+.m-input-moment .options button.is-active {
+  background-color: #FF9800 !important;
+  border: 1px solid #FF9800 !important;
+  color: #FFFFFF !important;
+}
+
+.m-input-moment .options button,
+.u-slider-time .handle:after {
+  color: #FF9800 !important;
+  border: 1px solid #FF9800 !important;
+}
+
+.m-calendar .toolbar .current-date,.m-calendar .current-day {
+  color: #FF9800 !important;
+}
+
+.m-calendar .toolbar button {
+  border: 1px solid #FF9800 !important;
+  background: #FF9800 !important;
+}
+
+.m-calendar thead td,
+.m-time .separater,
+.m-time .time-text {
+  color: #FF9800 !important;
+}
+
+.m-time .time,
+.u-slider-time .value,
+.u-slider-time .handle:after,
+.m-input-moment .btn-save {
+  background-color: #FF9800 !important;
+}
+.m-calendar tbody td:hover{
+  background: #FF9800 !important;
+  border-color: #FF9800 !important;
+  color: #fff!important;
+}
+.input{
+  display: none
+}
+.date_text{
+  color: #FF9800 !important;
+  padding-bottom: 11px;
+  position: relative;
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+.bike_img{
+  flex: 0 0 168px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 85px;
+  width: 200px;
+  size: landscape;
+  background-image: url(https://s3-ap-southeast-1.amazonaws.com/zoomcar/photographs/original/2f422d9….png?-1503045374);
+}
+.details{
+  display: flex;
+  padding-left: 20px;
+  flex: 2;
+  flex-direction: column;
+  justify-content: center;
+  border-left: .5px dotted rgba(0,0,0,.1);
+}
+
+.item{
+  display: flex;
+  margin: 4px 0;
+  flex-flow: row wrap;
+}
+.rate{
+  color: green;
+  font-weight: 600;
+  font-size: x-large;
+}
+.excessRate{
+  font-size: smaller;
+  color: #aeaeae;
+}
+.features {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 20px;
+}
+.feature{
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.time_selector{
+  width: 80%;
+  margin: auto; 
+}
+
+.time_heading{
+  font-size: 20px;
+  color: #aaaaaa;
+}
+.bike_view{
+  
+}
