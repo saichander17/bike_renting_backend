@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   scope "v1/bikes/", :module => "api/v1", :format => :json do
   	get 'available-bikes', to: 'bikes#fetch_available_bikes'
   end
+
+  get 'health_check', to: 'health_check#health_check'
 end
