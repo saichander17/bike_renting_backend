@@ -5,10 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+City.delete_all
 City.create({name: "Bengaluru"})
 City.create({name: "Hyderabad"})
 # City.create({name: "Bengaluru"})
 # City.create({name: "Bengaluru"})
+Location.delete_all
 Location.create({name: "Koramangala", city_id: 1})
 Location.create({name: "Indiranagar", city_id: 1})
 Location.create({name: "BTM Layout", city_id: 1})
@@ -18,11 +20,11 @@ Location.create({name: "Madhapur", city_id: 2})
 Location.create({name: "Manikonda", city_id: 2})
 Location.create({name: "Mehdipatnam", city_id: 2})
 Location.create({name: "Uppal", city_id: 2})
+User.delete_all
+User.create({first_name: "Sai", uid: "saichander@gmail.com", provider: "email", email: "saichander@gmail.com"})
+User.create({first_name: "Sai1", uid: "saichander1@gmail.com", provider: "email", email: "saichander1@gmail.com"})
 
-User.create({first_name: "Sai", uid: "saichander@gmail.com", provider: "email", email: "saichander@gmail.com"}) rescue nil
-User.create({first_name: "Sai1", uid: "saichander1@gmail.com", provider: "email", email: "saichander@gmail.com"}) rescue nil
-
-
+Bike.delete_all
 Bike.create({name: "Royal Enfield Classic", bike_brand_name: "Roayl Enfield",price: 150000, height: 100, weight: 160, milage: 20, tank_volume: 180})
 Bike.create({name: "Royal Enfield ThunderBird", bike_brand_name: "Roayl Enfield",price: 150000, height: 100, weight: 160, milage: 20, tank_volume: 220})
 Bike.create({name: "Bajaj Pulsar 150", bike_brand_name: "Bajaj",price: 120000, height: 100, weight: 160, milage: 20, tank_volume: 150})
@@ -31,7 +33,7 @@ Bike.create({name: "Bajaj Pulsar 120", bike_brand_name: "Bajaj",price: 80000, he
 Bike.create({name: "Bajaj Pulsar 200", bike_brand_name: "Bajaj",price: 180000, height: 100, weight: 160, milage: 20, tank_volume: 220})
 # Bike.create({name: "Royal Enfield Classic", bike_brand_name: "Roayl Enfield",price: 150000, height: 100, weight: 160, milage: 20, tank_volume: 150})
 # Bike.create({name: "Royal Enfield Classic", bike_brand_name: "Roayl Enfield",price: 150000, height: 100, weight: 160, milage: 20, tank_volume: 150})
-
+BikeNumber.delete_all
 BikeNumber.create({bike_id: 1,number: "AP 12312",location_id: 1})
 BikeNumber.create({bike_id: 1,number: "AP 12313",location_id: 2})
 BikeNumber.create({bike_id: 1,number: "AP 12314",location_id: 3})
