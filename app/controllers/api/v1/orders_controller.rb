@@ -20,6 +20,16 @@ class Api::V1::OrdersController < ApplicationController
 		end
 	end
 
+	def index
+		uid = current_user.id rescue User.first.id
+		orders = Order.where(user_id: uid)
+		res = []
+		orders.each do |order|
+			res<<OrderDecorator.new(order).as_json
+		end
+		render json: {success: true, order_details: res}
+	end
+
 	private
 	def user_id
 		@_user_id ||= params[:user_id] || 1					#TODO user_id should be equal to current_user.id once devise is done
