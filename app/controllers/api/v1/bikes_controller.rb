@@ -1,4 +1,4 @@
-class BikeController < ApplicationController
+class Api::V1::BikesController < ApplicationController
 	include BikeHelper
 	def fetch_available_bikes
 		available_bikes = get_available_bikes(params[:start_time], params[:end_time], params[:location_id])
