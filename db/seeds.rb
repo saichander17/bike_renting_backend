@@ -92,4 +92,4 @@ BikeNumber.create({bike_id: Bike.find_by(name: "Bajaj Pulsar 200").id,number: "A
 BikeNumber.create({bike_id: Bike.find_by(name: "Bajaj Pulsar 200").id,number: "AP 12356",location_id: 7})
 BikeNumber.create({bike_id: Bike.find_by(name: "Bajaj Pulsar 200").id,number: "AP 12357",location_id: 8})
 
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') #if Rails.env.development?
